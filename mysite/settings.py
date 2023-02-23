@@ -138,8 +138,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'cars/static')
 ]
 
-MEDIA_URL = 'uploads/'
-MEDIA_ROOT = BASE_DIR / 'uploads'
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
