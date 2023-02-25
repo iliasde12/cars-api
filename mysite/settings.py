@@ -27,6 +27,21 @@ SECRET_KEY = 'django-insecure-xik@gp*ggywaj10rd$ow1j^4^x&j)a@2lv+w^g7)$^90dc%k5h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+CSRF_TRUSTED_ORIGINS = ['http://.*', 'https://cars-api-production.up.railway.app/']
+
+
+# HTTPS Settings
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = False
+SECURE_SSL_REDIRECT = False
+
+# HSTS Settings
+
+SECURE_HSTS_SECONDS = 31536000
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+
 ALLOWED_HOSTS = ['*']
 CORS_ORIGIN_ALLOW_ALL = True
 
