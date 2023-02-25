@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-xik@gp*ggywaj10rd$ow1j^4^x&j)a@2lv+w^g7)$^90dc%k5h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-CSRF_TRUSTED_ORIGINS = ['http://.*', 'https://cars-api-production.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://cars-api-production.up.railway.app/','https://cars-api-production.up.railway.app/admin/']
 
 
 # HTTPS Settings
