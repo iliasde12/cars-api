@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import CarsFilms,CarsPersonages,CarsSamenvating,reviewsFilms,muziek,muziekAfbeelding,games
+from .models import CarsFilms,CarsPersonages,CarsSamenvating,muziek,muziekAfbeelding,games
 
 class CarsFilmsSerializer(serializers.ModelSerializer):
     class Meta:

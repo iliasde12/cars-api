@@ -5,13 +5,12 @@ from urllib import request
 from django.shortcuts import render
 from django.http import HttpResponse , Http404, HttpResponseRedirect
 from django.template import loader
-from .models import CarsFilms, CarsPersonages,CarsSamenvating,reviewsFilms, muziek, muziekAfbeelding,games
-from .forms import ReviewForm
+from .models import CarsFilms, CarsPersonages,CarsSamenvating, muziek, muziekAfbeelding,games
 from django.db.models import Q
 from django.views.generic import TemplateView
 from django.urls import reverse
 from rest_framework import generics
-from .serializers import CarsFilmsSerializer,CarsPersonagesSerializer,CarsSamenvatingSerializer,reviewsFilmsSerializer,muziekSerializer,muziekAfbeeldingSerializer,gamesSerializer
+from .serializers import CarsFilmsSerializer,CarsPersonagesSerializer,CarsSamenvatingSerializer,muziekSerializer,muziekAfbeeldingSerializer,gamesSerializer
 
 # Create your views here.
 
@@ -39,14 +38,7 @@ class CarsSamenvatingList(generics.ListCreateAPIView):
 class CarsSamenvatingDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = CarsSamenvating.objects.all()
     serializer_class = CarsSamenvatingSerializer
-
-class reviewsFilmsList(generics.ListCreateAPIView):
-    queryset = reviewsFilms.objects.all()
-    serializer_class = reviewsFilmsSerializer
-
-class reviewsFilmsDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = reviewsFilms.objects.all()
-    serializer_class = reviewsFilmsSerializer
+    
 
 class muziekList(generics.ListCreateAPIView):
     queryset = muziek.objects.all()
