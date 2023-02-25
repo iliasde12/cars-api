@@ -13,10 +13,7 @@ class CarsSamenvatingSerializer(serializers.ModelSerializer):
     class Meta:
         model = CarsSamenvating
         fields = '__all__'
-class reviewsFilmsSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = reviewsFilms
-        fields = '__all__'
+
 class muziekSerializer(serializers.ModelSerializer):
     class Meta:
         model = muziek

@@ -36,14 +36,6 @@ class CarsSamenvating(models.Model):
     def __str__(self) :
         return self.SamenvattingTitle
 
-class reviewsFilms(models.Model):
-     CarsFilm = models.ForeignKey(CarsFilms, on_delete=models.CASCADE ,null=True)
-     naam = models.CharField(max_length=200 ,null=True)
-     email = models.EmailField(max_length = 254)
-     review = models.TextField(null=True)
-     
-     def __str__(self) :
-        return str(self.id)
 
 class muziek(models.Model):
     CarsFilm = models.ForeignKey(CarsFilms, on_delete=models.CASCADE ,null=True)
