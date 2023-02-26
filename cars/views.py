@@ -5,12 +5,12 @@ from urllib import request
 from django.shortcuts import render
 from django.http import HttpResponse , Http404, HttpResponseRedirect
 from django.template import loader
-from .models import CarsFilms, CarsPersonages,CarsSamenvating, muziek, muziekAfbeelding,games
+from .models import CarsFilms, CarsPersonages,CarsSamenvating, muziek,games
 from django.db.models import Q
 from django.views.generic import TemplateView
 from django.urls import reverse
 from rest_framework import generics
-from .serializers import CarsFilmsSerializer,CarsPersonagesSerializer,CarsSamenvatingSerializer,muziekSerializer,muziekAfbeeldingSerializer,gamesSerializer
+from .serializers import CarsFilmsSerializer,CarsPersonagesSerializer,CarsSamenvatingSerializer,muziekSerializer,gamesSerializer
 
 # Create your views here.
 
@@ -48,13 +48,6 @@ class muziekDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = muziek.objects.all()
     serializer_class = muziekSerializer
 
-class muziekAfbeeldingList(generics.ListCreateAPIView):
-    queryset = muziekAfbeelding.objects.all()
-    serializer_class = muziekAfbeeldingSerializer
-
-class muziekAfbeeldingDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = muziekAfbeelding.objects.all()
-    serializer_class = muziekAfbeeldingSerializer
 
 class gamesList(generics.ListCreateAPIView):
     queryset = games.objects.all()

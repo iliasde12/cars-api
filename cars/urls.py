@@ -14,8 +14,6 @@ urlpatterns = [
     path('carssamenvating/<int:pk>/', views.CarsSamenvatingDetail.as_view(), name='carssamenvating-detail'),
     path('muziek/', views.muziekList.as_view(), name='muziek-list'),
     path('muziek/<int:pk>/', views.muziekDetail.as_view(), name='muziek-detail'),
-    path('muziekafbeelding/', views.muziekAfbeeldingList.as_view(), name='muziekafbeelding-list'),
-    path('muziekafbeelding/<int:pk>/', views.muziekAfbeeldingDetail.as_view(), name='muziekafbeelding-detail'),
     path('game/', views.gamesList.as_view(), name='game-list'),
     path('game/<int:pk>/', views.gamesDetail.as_view(), name='game-detail'),
 

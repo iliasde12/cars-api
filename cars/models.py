@@ -48,14 +48,7 @@ class muziek(models.Model):
     def __str__(self) :
         return str(self.album)
 
-class muziekAfbeelding(models.Model):
-    CarsFilm = models.ForeignKey(CarsFilms, on_delete=models.CASCADE ,null=True)
-    AlbumNaam = models.CharField(max_length=200 ,null=True)
-    CarsAfbeeldingAlbum =  models.FileField(upload_to='static/muziek/afbeelding/cover/',null=True) 
 
-    def __str__(self) :
-        return str(self.AlbumNaam)
-        
 
 class games(models.Model):
     CarsFilm = models.ForeignKey(CarsFilms, on_delete=models.CASCADE ,null=True)

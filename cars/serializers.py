@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import CarsFilms,CarsPersonages,CarsSamenvating,muziek,muziekAfbeelding,games
+from .models import CarsFilms,CarsPersonages,CarsSamenvating,muziek,games
 
 class CarsFilmsSerializer(serializers.ModelSerializer):
     class Meta:
@@ -18,10 +18,7 @@ class muziekSerializer(serializers.ModelSerializer):
     class Meta:
         model = muziek
         fields = '__all__'
-class muziekAfbeeldingSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = muziekAfbeelding
-        fields = '__all__'
+
 class gamesSerializer(serializers.ModelSerializer):
     class Meta:
         model = games
