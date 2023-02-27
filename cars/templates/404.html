@@ -1,17 +1,11 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>404 page</title>
-        <link rel="stylesheet" href="{% static 'css/404.css' %}">
-        <link rel="icon" type="image/x-icon" href="{% static 'icon/cars.ico' %}">
-    </head>
-    <body>
-        <div class="container">
-            <div class="container-error-message">
-                <p>Pagina niet gevonden</p>
-                <button><a href="/api/">Return to home page</a></button>
-            </div>
-        </div>
-    </body>
-</html>
+{% block title %}404 pagina{% endblock %}
+{% block main %}
+<div class="container-error">
+    <div class="error">
+        <p>Pagina not Found</p>
+        <button><a href="/api/">Ga terug naar home page</a></button>
+    </div>
+</div>
+{% endblock %}
