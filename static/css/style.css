@@ -1,14 +1,8 @@
 .midden-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: 100%;
-  }
-  
-  .container-page {
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    text-align: center;
+}
