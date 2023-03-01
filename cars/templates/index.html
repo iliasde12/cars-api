@@ -1,2 +1,31 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block main %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<div class="container-page">
+    <div class="midden-container">
+            <div class="carsfilms">
+            <h1>Carsfilms</h1>
+            <a href="">Carsfilms</a>
+        </div>
+        <div class="carspersonages">
+            <h1>carspersonages</h1>
+            <a href="">carspersonages</a>
+        </div>
+        <div class="carssamenvating">
+            <h1>carssamenvating</h1>
+            <a href="">carssamenvating</a>
+        </div>
+        <div class="muziek">
+            <h1>muziek</h1>
+            <a href="">muziek</a>
+        </div>
+        <div class="game">
+            <h1>game</h1>
+            <a href="">game</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

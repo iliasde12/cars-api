@@ -12,7 +12,6 @@ from .serializers import CarsFilmsSerializer,CarsPersonagesSerializer,CarsSamenv
 class CarsFilmsListCreateView(generics.ListCreateAPIView):
     queryset = CarsFilms.objects.all()
     serializer_class = CarsFilmsSerializer
-    template_name = 'carsfilms_list.html'
 
 class CarsFilmsDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = CarsFilms.objects.all()
