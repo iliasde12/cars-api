@@ -1,14 +1,8 @@
 from multiprocessing import context
-from re import template
 from unittest import loader
 from urllib import request
 from django.shortcuts import render
-from django.http import HttpResponse , Http404, HttpResponseRedirect
-from django.template import loader
 from .models import CarsFilms, CarsPersonages,CarsSamenvating, muziek,games
-from django.db.models import Q
-from django.views.generic import TemplateView
-from django.urls import reverse
 from rest_framework import generics
 from .serializers import CarsFilmsSerializer,CarsPersonagesSerializer,CarsSamenvatingSerializer,muziekSerializer,gamesSerializer
 
@@ -18,6 +12,7 @@ from .serializers import CarsFilmsSerializer,CarsPersonagesSerializer,CarsSamenv
 class CarsFilmsListCreateView(generics.ListCreateAPIView):
     queryset = CarsFilms.objects.all()
     serializer_class = CarsFilmsSerializer
+    template_name = 'carsfilms_list.html'
 
 class CarsFilmsDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = CarsFilms.objects.all()

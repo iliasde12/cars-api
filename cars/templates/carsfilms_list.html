@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+<h1>Cars Films List</h1>
+<ul>
+    {% for film in object_list %}
+        <li>{{ film.title }} - {{ film.release_date }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
