@@ -11,20 +11,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <a class="navbar-brand">CarsApi</a>
-              </div>
-              <ul class="nav navbar-nav">
-                <li><a href="{% url 'carsfilms-list-create' %}" class="{% block carsfilm%} {% endblock %}">CarsFilm</a></li>
-                <li><a href="{% url 'carspersonages-list' %}" class="{% block carspersonages%} {% endblock %}">Carspersonages</a></li>
-                <li><a href="{% url 'carssamenvating-list' %}" class="{% block carsSamenvating%} {% endblock %}">Carssamenvatting</a></li>
-                <li><a href="{% url 'muziek-list' %}" class="{% block Carsmuziek%} {% endblock %}" >CarsMuziek</a></li>
-                <li><a href="{% url 'game-list' %}" class="{% block Carsgame%} {% endblock %}">CarsGame</a></li>
-              </ul>
-            </div>
-          </nav>
         {% block main %}
         {% endblock %}
     </body>
